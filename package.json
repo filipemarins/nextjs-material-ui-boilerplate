@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "license": "SEE LICENSE IN LICENSE FILE",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "lint": "npx eslint ./ --fix"
+    "dev": "next ./src",
+    "build": "next build ./src",
+    "start": "next start ./src",
+    "lint": "npx eslint ./src --fix"
   },
   "husky": {
     "hooks": {
