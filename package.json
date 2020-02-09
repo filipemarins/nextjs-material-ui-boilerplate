@@ -6,6 +6,7 @@
     "dev": "next ./src",
     "build": "next build ./src",
     "start": "next start ./src",
+    "test": "npx jest ./src",
     "lint": "npx eslint ./src --fix"
   },
   "husky": {
@@ -13,20 +14,27 @@
       "pre-commit": "npm run lint"
     }
   },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
+  },
   "dependencies": {
     "@material-ui/core": "^4.9.1",
     "clsx": "^1.1.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "next": "^9.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-jest": "^23.7.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "husky": "^4.2.1",
+    "jest": "^25.1.0",
     "prettier": "^1.19.1"
   }
 }
