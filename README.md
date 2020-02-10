@@ -1,25 +1,38 @@
-# Next.js example
+# Server side rendering boilerplate with Next.js and Material-ui
 
-## How to use
+This project is a simple boilerplate for server side rendering approach. It comes with `Next.js` to handle routes and server side rendering, `Material-ui` for a components framework, `Styled-components` to style lib, `Jest and Enzyme` for test suite, `Eslint and Prettier` for a code style/quality, and `Husky` to prevent bad commits/pushs.
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+## Installing / Getting started
 
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
+Download the example [or clone the repo](https://github.com/filipemarins/nextjs-material-ui-boilerplate):
+
+
+```shell
+git clone https://github.com/filipemarins/nextjs-material-ui-boilerplate
+npm install
 ```
 
-Install it and run:
+## Development
 
-```sh
-npm install
+The eslint and prettier is configured with husky to run and fix problems on pre commit. And tests before push.
+
+To build the project and run the server in developer mode:
+```
 npm run dev
 ```
 
-or:
+To run the tests:
+```
+npm test
+````
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/nextjs)
+## Production
 
-## The idea behind the example
+To build the project and start the server to production:
+```
+npm run build && npm run start
+```
 
-[Next.js](https://github.com/zeit/next.js) is a framework for server-rendered React apps.
+## Licensing
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
