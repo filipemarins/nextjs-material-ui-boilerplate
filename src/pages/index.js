@@ -1,25 +1,14 @@
 import React from 'react';
+
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import MuiLink from '@material-ui/core/Link';
-import ProTip from '../components/ProTip';
-import Link from '../components/Link';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <MuiLink color="inherit" href="https://material-ui.com/">
-        Your Website
-      </MuiLink>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import ProTip from '../components/pro-tip';
+import Link from '../components/link';
+import Copyright from '../components/copyright';
 
-export default function Index() {
+const Index = () => {
   return (
     <Container maxWidth="sm">
       <Box my={4}>
@@ -34,4 +23,6 @@ export default function Index() {
       </Box>
     </Container>
   );
-}
+};
+
+export default Index;
