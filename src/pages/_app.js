@@ -1,8 +1,11 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider as MaterialUiProvider } from '@material-ui/core/styles';
+import { ThemeProvider as StyledComponentProvider } from 'styled-components';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
+
 import theme from '../themes/dark';
 
 export default class MyApp extends App {
@@ -17,7 +20,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>My page</title>
           <meta
@@ -25,11 +28,13 @@ export default class MyApp extends App {
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
         </Head>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </React.Fragment>
+        <MaterialUiProvider theme={theme}>
+          <StyledComponentProvider theme={theme}>
+            <CssBaseline />
+            <Component {...pageProps} />
+          </StyledComponentProvider>
+        </MaterialUiProvider>
+      </>
     );
   }
 }
