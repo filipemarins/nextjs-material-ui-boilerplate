@@ -14,5 +14,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Text Editors
+.vscode
+
 # Next.js
 /src/.next
