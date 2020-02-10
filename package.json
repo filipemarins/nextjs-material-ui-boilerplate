@@ -15,7 +15,9 @@
     }
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^4.9.1",
@@ -24,9 +26,10 @@
     "next": "^9.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "enzyme": "^3.11.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
