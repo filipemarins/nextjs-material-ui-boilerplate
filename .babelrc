@@ -8,8 +8,7 @@
       {
         "ssr": true,
         "displayName": true,
-        "minify": false,
-        "transpileTemplateLiterals": false
+        "minify": false
       }
     ]
   ]
