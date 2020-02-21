@@ -21,8 +21,8 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "^4.9.1",
-    "next": "^9.2.1",
+    "@material-ui/core": "^4.9.3",
+    "next": "^9.2.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -37,7 +37,7 @@
     "eslint-plugin-jest": "^23.7.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "husky": "^4.2.1",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
     "prettier": "^1.19.1"
   }
