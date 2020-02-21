@@ -1,12 +1,13 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider as MaterialUiProvider } from '@material-ui/core/styles';
+import { StylesProvider } from '@material-ui/styles';
 import { ThemeProvider as StyledComponentProvider } from 'styled-components';
+import { ThemeProvider as MaterialUiProvider } from '@material-ui/core/styles';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import theme from '../src/themes/light';
+import theme from '../src/themes/dark';
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -28,12 +29,14 @@ export default class MyApp extends App {
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
         </Head>
-        <MaterialUiProvider theme={theme}>
-          <StyledComponentProvider theme={theme}>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </StyledComponentProvider>
-        </MaterialUiProvider>
+        <StyledComponentProvider theme={theme}>
+          <MaterialUiProvider theme={theme}>
+            <StylesProvider injectFirst>
+              <CssBaseline />
+              <Component {...pageProps} />
+            </StylesProvider>
+          </MaterialUiProvider>
+        </StyledComponentProvider>
       </>
     );
   }
