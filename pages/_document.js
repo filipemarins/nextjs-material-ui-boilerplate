@@ -3,7 +3,7 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets as MaterialUiServerStyleSheets } from '@material-ui/styles';
 import { ServerStyleSheet as StyledComponentSheets } from 'styled-components';
 
-import theme from '../themes/dark';
+import theme from '../src/themes/dark';
 
 export default class MyDocument extends Document {
   render() {
