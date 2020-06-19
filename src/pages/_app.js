@@ -28,6 +28,12 @@ export default class MyApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+            as="font"
+          />
         </Head>
         <StyledComponentProvider theme={theme}>
           <MaterialUiProvider theme={theme}>
