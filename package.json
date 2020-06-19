@@ -7,11 +7,15 @@
     "build": "next build",
     "start": "next start",
     "test": "npx jest ./src",
-    "lint": "npx eslint ./src --fix"
+    "lint-staged": "npx lint-staged",
+    "lint": "npx eslint ./src"
+  },
+  "lint-staged": {
+    "*.js": "npx eslint --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "npm run lint-staged",
       "pre-push": "npm test"
     }
   },
@@ -22,6 +26,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
+    "lint-staged": "^10.2.11",
     "next": "^9.4.4",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
