@@ -3,13 +3,6 @@
     "next/babel"
   ],
   "plugins": [
-    [
-      "styled-components",
-      {
-        "ssr": true,
-        "displayName": true,
-        "minify": false
-      }
-    ]
+    ["styled-components", { "minify": false }]
   ]
 }
